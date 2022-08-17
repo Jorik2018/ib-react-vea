@@ -4,11 +4,11 @@
 content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/>
 <title>React App</title>
 <?php
+$path="/wp-content/plugins/vea/";
 echo "hola cpanel";
 ?>
-<script defer="defer" src="/build/static/js/main.127b8841.js"></script>
-<link href="/build
-/static/css/main.073c9b0a.css" rel="stylesheet">
+<script defer="defer" src="<?=$path?>/build/static/js/main.127b8841.js"></script>
+<link href="<?=$path?>/build/static/css/main.073c9b0a.css" rel="stylesheet">
 
 
 </head><body>
