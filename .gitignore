@@ -8,8 +8,9 @@
 # testing
 /coverage
 
+#lo comento para q se suba a git el compilado
 # production
-/build
+#/build
 
 # misc
 .DS_Store
