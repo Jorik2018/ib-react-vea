@@ -1,16 +1,49 @@
-
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" 
-content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/>
-<title>React App</title>
 <?php
-$path="/wp-content/plugins/vea/";
-echo "hola cpanel";
+/**
+* Plugin Name: wp_vea
+* Plugin URI: https://www.your-site.com/
+* Description: Test.
+* Version: 0.1
+* Author: your-name
+* Author URI: https://www.your-site.com/
+**/
+
+/*
+function wpdocs_register_my_custom_menu_page() {
+    add_menu_page(
+        __( 'Custom Menu Title', 'textdomain' ),
+        'custom menu',
+        'manage_options',
+        'myplugin/myplugin-admin.php',
+        '',
+        plugins_url( 'myplugin/images/icon.png' ),
+    );
+}
+
+*/
+function p_vea_admin_menu() {
+    add_menu_page( 
+        'My Top Level Menu Example', //page titlee
+    'Top Level Menu', 
+    'manage_options',//Capabiliy
+     'example', //url
+     'p_vea_display_text', 
+     'need a uri to your image here!!', 6  );
+ }
+ 
+
+ function p_vea_display_text(){
+    //echo plugins_url(__FILE__ );
+    $path="/wp-content/plugins/wp_vea";
+    ?>
+    <h1 class="wp-heading-inline">Veas</h1>
+    <script defer="defer" src="<?=$path?>/build/static/js/main.127b8841.js"></script>
+    <link href="<?=$path?>/build/static/css/main.073c9b0a.css" rel="stylesheet">
+    <div id="root"></div>
+    <?php
+    //require_once 'pathtofile.php'; //--> make sure you read up on paths and require to find your file.
+ }
+ add_action( 'admin_menu', 'p_vea_admin_menu' );
+
+
 ?>
-<script defer="defer" src="<?=$path?>/build/static/js/main.127b8841.js"></script>
-<link href="<?=$path?>/build/static/css/main.073c9b0a.css" rel="stylesheet">
-
-
-</head><body>
-    <noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body>
-    </html>

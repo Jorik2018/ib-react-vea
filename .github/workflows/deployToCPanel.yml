@@ -22,4 +22,5 @@ jobs:
           **/.git*/**
           **/src/**
           **/public/**
-          fileToExclude.txt
+          package.json
+          package-lock.json
