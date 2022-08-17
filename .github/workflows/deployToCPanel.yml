@@ -21,4 +21,5 @@ jobs:
           **/.git*
           **/.git*/**
           **/src/**
+          **/public/**
           fileToExclude.txt
