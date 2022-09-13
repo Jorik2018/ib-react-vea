@@ -34,11 +34,25 @@ function p_vea_admin_menu() {
 
  function p_vea_display_text(){
     //echo plugins_url(__FILE__ );
-    $path="/wp-content/plugins/wp_vea";
+    $path=__DIR__;
+    $js = glob($path."/build/static/js/main*.js");
+    $css = glob($path."/build/static/css/main*.css");
+    $path="/wp-content/plugins/ib-vea";
+    /*
+    function unhook_parent_style() {
+
+  wp_dequeue_style( 'wp-bootstrap-starter-style' );
+  wp_deregister_style( 'wp-bootstrap-starter-style' );
+
+}
+add_action( 'wp_enqueue_scripts', 'unhook_parent_style', 20 );
+    */
+    //wp_enqueue_style( 'wpbs-child-css', $path."/build/static/css/".basename($css[0]));
     ?>
+    
     <h1 class="wp-heading-inline">Veas</h1>
-    <script defer="defer" src="<?=$path?>/build/static/js/main.127b8841.js"></script>
-    <link href="<?=$path?>/build/static/css/main.073c9b0a.css" rel="stylesheet">
+    <script defer="defer" src="<?=$path?>/build/static/js/<?=basename($js[0])?>"></script>
+    <link href="<?=$path?>/build/static/css/<?=basename($css[0])?>" rel="stylesheet">
     <div id="root"></div>
     <?php
     //require_once 'pathtofile.php'; //--> make sure you read up on paths and require to find your file.

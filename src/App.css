@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+input.MuiInputBase-input:hover {
+  border-color: none;
+  outline: none;
+  box-shadow: none;
+  /* padding: 0 8px; */
+  /* line-height: 2; */
+  /* min-height: 30px; */
+}
+.MuiFormControl-root{
+  width: -webkit-fill-available;
+}
+.MuiInput-input,
+.MuiFormControl-root {
+  width: max-content;
+  width: -webkit-fill-available;
+  margin: 20px 0px 0px !important;
+}
+
+.noMarginTop.MuiInput-input,
+.noMarginTop.MuiFormControl-root {
+  margin-top: 0px !important;
+}
+select.MuiNativeSelect-select{
+  width: -webkit-fill-available;
+  padding: 4px 0px 5px;
+}
+input.MuiInputBase-input {
+  padding: 16.5px 14px;
+  line-height: unset;
+  min-height: unset;
+  box-shadow: unset; 
+  border-radius: unset; 
+  border: unset; 
+  border-width: 0px;
+  background-color: unset; 
+  color: unset;
+}
